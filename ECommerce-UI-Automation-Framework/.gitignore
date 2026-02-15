@@ -1,0 +1,16 @@
+# 忽略 PyCharm 配置文件
+.idea/
+
+# 忽略 Python 缓存
+__pycache__/
+*.py[cod]
+
+# 忽略虚拟环境 (绝对不能传这个！)
+.venv/
+venv/
+env/
+
+# 忽略测试报告和截图 (每次跑都不一样，不用传)
+report/
+logs/
+*.log
