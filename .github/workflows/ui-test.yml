@@ -9,6 +9,9 @@ on:
 jobs:
   ui-test:
     runs-on: ubuntu-latest
+    # 🌟 修改点在这里：把 permissions 提到了 Job 级别，和 steps 平级
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -52,5 +55,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: allure-report
-        permissions:
-          contents: write
