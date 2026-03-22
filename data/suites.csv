@@ -1,29 +1,29 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"skipped","Sun Mar 22 12:14:43 UTC 2026","Sun Mar 22 12:14:43 UTC 2026","0","tests","test_checkout","TestCheckout","","","test_invalid_postal_code","异常场景：邮编包含字母（预期失败）"
-"passed","Sun Mar 22 12:15:00 UTC 2026","Sun Mar 22 12:15:00 UTC 2026","53","tests","test_inventory","TestInventory","","","test_product_list_not_empty","商品列表页应至少有一个商品。"
-"passed","Sun Mar 22 12:14:19 UTC 2026","Sun Mar 22 12:14:19 UTC 2026","44","tests","test_cart","TestCart","","","test_cart_contains_added_products","
-        购物车里应该包含之前加入的两个商品。
-        通过商品名称验证，不是通过数量。
-        "
-"passed","Sun Mar 22 12:15:07 UTC 2026","Sun Mar 22 12:15:07 UTC 2026","298","tests","test_login","TestLogin","","","test_empty_credentials_show_error","空用户名密码提交，应显示错误提示。"
-"passed","Sun Mar 22 12:14:55 UTC 2026","Sun Mar 22 12:14:55 UTC 2026","33","tests","test_detail","TestDetail","","","test_detail_shows_correct_product_name","详情页显示的商品名称应和点击的商品一致。"
-"passed","Sun Mar 22 12:14:57 UTC 2026","Sun Mar 22 12:14:58 UTC 2026","107","tests","test_detail","TestDetail","","","test_add_to_cart_from_detail_updates_badge","从详情页加入购物车，角标变为 1。"
-"failed","Sun Mar 22 12:14:59 UTC 2026","Sun Mar 22 12:14:59 UTC 2026","162","tests","test_detail","TestDetail","","","test_remove_from_cart_on_detail_clears_badge","加入后再移除，角标消失（返回空字符串）。"
-"passed","Sun Mar 22 12:14:56 UTC 2026","Sun Mar 22 12:14:56 UTC 2026","94","tests","test_detail","TestDetail","","","test_back_to_products_navigates_correctly","点击返回按钮，URL 跳回 inventory 页。"
-"passed","Sun Mar 22 12:15:01 UTC 2026","Sun Mar 22 12:15:01 UTC 2026","117","tests","test_inventory","TestInventory","","","test_add_single_product_updates_badge","
+"passed","Sun Mar 22 12:32:14 UTC 2026","Sun Mar 22 12:32:14 UTC 2026","124","tests","test_inventory","TestInventory","","","test_add_single_product_updates_badge","
         通过商品名称加入购物车，角标数字变为 1。
         使用动态 XPath 定位，不依赖硬编码 ID。
         "
-"broken","Sun Mar 22 12:14:33 UTC 2026","Sun Mar 22 12:14:43 UTC 2026","10224","tests","test_checkout","TestCheckout","","","test_complete_order","
+"passed","Sun Mar 22 12:32:00 UTC 2026","Sun Mar 22 12:32:00 UTC 2026","111","tests","test_detail","TestDetail","","","test_add_to_cart_from_detail_updates_badge","从详情页加入购物车，角标变为 1。"
+"passed","Sun Mar 22 12:32:15 UTC 2026","Sun Mar 22 12:32:15 UTC 2026","207","tests","test_inventory","TestInventory","","","test_add_two_products_updates_badge","加入两个商品，角标数字变为 2。"
+"broken","Sun Mar 22 12:31:35 UTC 2026","Sun Mar 22 12:31:45 UTC 2026","10226","tests","test_checkout","TestCheckout","","","test_complete_order","
         完整购物流程：加购 → 结算 → 成功。
         cart_page fixture 已完成登录、加商品、进入购物车，
         这里直接结算即可。
         "
-"passed","Sun Mar 22 12:15:02 UTC 2026","Sun Mar 22 12:15:02 UTC 2026","203","tests","test_inventory","TestInventory","","","test_add_two_products_updates_badge","加入两个商品，角标数字变为 2。"
-"passed","Sun Mar 22 12:15:06 UTC 2026","Sun Mar 22 12:15:06 UTC 2026","338","tests","test_login","TestLogin","","","test_login_scenarios[problem_user]","数据驱动：正向登录成功 + 负向账号锁定。"
-"broken","Sun Mar 22 12:14:21 UTC 2026","Sun Mar 22 12:14:31 UTC 2026","10228","tests","test_cart","TestCart","","","test_checkout_success_message","完成结账后显示成功信息。"
-"passed","Sun Mar 22 12:15:05 UTC 2026","Sun Mar 22 12:15:05 UTC 2026","363","tests","test_login","TestLogin","","","test_login_scenarios[locked_out_user]","数据驱动：正向登录成功 + 负向账号锁定。"
-"passed","Sun Mar 22 12:15:04 UTC 2026","Sun Mar 22 12:15:04 UTC 2026","370","tests","test_login","TestLogin","","","test_login_scenarios[standard_user]","数据驱动：正向登录成功 + 负向账号锁定。"
-"passed","Sun Mar 22 12:15:07 UTC 2026","Sun Mar 22 12:15:08 UTC 2026","348","tests","test_login","TestLogin","","","test_wrong_password_shows_error","错误密码，应显示错误提示。"
-"passed","Sun Mar 22 12:15:03 UTC 2026","Sun Mar 22 12:15:03 UTC 2026","91","tests","test_inventory","TestInventory","","","test_go_to_cart_navigates_correctly","点击购物车图标，URL 跳转到 cart 页面。"
-"failed","Sun Mar 22 12:14:20 UTC 2026","Sun Mar 22 12:14:20 UTC 2026","10","tests","test_cart","TestCart","","","test_cart_item_count_is_correct","购物车商品数量应为 2。"
+"passed","Sun Mar 22 12:32:18 UTC 2026","Sun Mar 22 12:32:19 UTC 2026","321","tests","test_login","TestLogin","","","test_login_scenarios[problem_user]","数据驱动：正向登录成功 + 负向账号锁定。"
+"broken","Sun Mar 22 12:31:24 UTC 2026","Sun Mar 22 12:31:34 UTC 2026","10218","tests","test_cart","TestCart","","","test_checkout_success_message","完成结账后显示成功信息。"
+"broken","Sun Mar 22 12:32:01 UTC 2026","Sun Mar 22 12:32:12 UTC 2026","10353","tests","test_detail","TestDetail","","","test_remove_from_cart_on_detail_clears_badge","加入后再移除，角标消失（返回空字符串）。"
+"failed","Sun Mar 22 12:31:23 UTC 2026","Sun Mar 22 12:31:23 UTC 2026","9","tests","test_cart","TestCart","","","test_cart_item_count_is_correct","购物车商品数量应为 2。"
+"passed","Sun Mar 22 12:31:58 UTC 2026","Sun Mar 22 12:31:58 UTC 2026","32","tests","test_detail","TestDetail","","","test_detail_shows_correct_product_name","详情页显示的商品名称应和点击的商品一致。"
+"passed","Sun Mar 22 12:32:19 UTC 2026","Sun Mar 22 12:32:20 UTC 2026","289","tests","test_login","TestLogin","","","test_empty_credentials_show_error","空用户名密码提交，应显示错误提示。"
+"passed","Sun Mar 22 12:31:21 UTC 2026","Sun Mar 22 12:31:21 UTC 2026","22","tests","test_cart","TestCart","","","test_cart_contains_added_products","
+        购物车里应该包含之前加入的两个商品。
+        通过商品名称验证，不是通过数量。
+        "
+"passed","Sun Mar 22 12:32:13 UTC 2026","Sun Mar 22 12:32:13 UTC 2026","63","tests","test_inventory","TestInventory","","","test_product_list_not_empty","商品列表页应至少有一个商品。"
+"skipped","Sun Mar 22 12:31:45 UTC 2026","Sun Mar 22 12:31:45 UTC 2026","0","tests","test_checkout","TestCheckout","","","test_invalid_postal_code","异常场景：邮编包含字母（预期失败）"
+"passed","Sun Mar 22 12:32:20 UTC 2026","Sun Mar 22 12:32:21 UTC 2026","320","tests","test_login","TestLogin","","","test_wrong_password_shows_error","错误密码，应显示错误提示。"
+"passed","Sun Mar 22 12:31:59 UTC 2026","Sun Mar 22 12:31:59 UTC 2026","87","tests","test_detail","TestDetail","","","test_back_to_products_navigates_correctly","点击返回按钮，URL 跳回 inventory 页。"
+"passed","Sun Mar 22 12:32:17 UTC 2026","Sun Mar 22 12:32:17 UTC 2026","329","tests","test_login","TestLogin","","","test_login_scenarios[standard_user]","数据驱动：正向登录成功 + 负向账号锁定。"
+"passed","Sun Mar 22 12:32:18 UTC 2026","Sun Mar 22 12:32:18 UTC 2026","325","tests","test_login","TestLogin","","","test_login_scenarios[locked_out_user]","数据驱动：正向登录成功 + 负向账号锁定。"
+"passed","Sun Mar 22 12:32:16 UTC 2026","Sun Mar 22 12:32:16 UTC 2026","97","tests","test_inventory","TestInventory","","","test_go_to_cart_navigates_correctly","点击购物车图标，URL 跳转到 cart 页面。"
