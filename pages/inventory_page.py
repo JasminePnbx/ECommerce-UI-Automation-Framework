@@ -25,7 +25,14 @@ class InventoryPage(BasePage):
     def add_product_to_cart(self, product_name: str) -> "InventoryPage":
         """通过商品名称加入购物车，不依赖硬编码 ID。"""
         logger.info("add_product_to_cart | product=%s", product_name)
-        self._click(self._add_to_cart_locator(product_name))
+        locator = self._add_to_cart_locator(product_name)
+
+        # 1. 点击加入购物车
+        self._click(locator)
+
+        # 🌟【修复核心】：加购后，死死盯着这个按钮，直到它的文字变成 "Remove"，才允许代码往下走！
+        self._wait.until(EC.text_to_be_present_in_element(locator, "Remove"))
+
         return self
 
     def go_to_cart(self) -> None:
