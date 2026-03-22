@@ -1,0 +1,106 @@
+12:08:57 [DEBUG   ] selenium.webdriver.common.selenium_manager - Selenium Manager binary found at: /opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/selenium/webdriver/common/linux/selenium-manager
+12:08:57 [DEBUG   ] selenium.webdriver.common.selenium_manager - Executing process: /opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/selenium/webdriver/common/linux/selenium-manager --browser chrome --debug --language-binding python --output json
+12:08:57 [DEBUG   ] selenium.webdriver.common.selenium_manager - Found chromedriver 145.0.7632.117 in PATH: /usr/bin/chromedriver
+12:08:57 [DEBUG   ] selenium.webdriver.common.selenium_manager - chrome detected at /usr/bin/google-chrome
+12:08:57 [DEBUG   ] selenium.webdriver.common.selenium_manager - Running command: /usr/bin/google-chrome --version
+12:08:57 [DEBUG   ] selenium.webdriver.common.selenium_manager - Output: "Google Chrome 146.0.7680.153 "
+12:08:57 [DEBUG   ] selenium.webdriver.common.selenium_manager - Detected browser: chrome 146.0.7680.153
+12:08:57 [DEBUG   ] selenium.webdriver.common.selenium_manager - Required driver: chromedriver 146.0.7680.153
+12:08:57 [WARNING ] selenium.webdriver.common.selenium_manager - The chromedriver version (145.0.7632.117) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (146.0.7680.153); currently, chromedriver 146.0.7680.153 is recommended for chrome 146.*, so it is advised to delete the driver in PATH and retry
+12:08:57 [DEBUG   ] selenium.webdriver.common.selenium_manager - Driver path: /usr/bin/chromedriver
+12:08:57 [DEBUG   ] selenium.webdriver.common.selenium_manager - Browser path: /usr/bin/google-chrome
+12:08:57 [DEBUG   ] selenium.webdriver.common.service - Started executable: `/usr/bin/chromedriver` in a child process with pid: 4896 using 0 to output -3
+12:08:57 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': '/usr/bin/google-chrome', 'args': ['--headless=new', '--no-sandbox', '--disable-dev-shm-usage', '--window-size=1920,1080']}}}}
+12:08:57 [DEBUG   ] urllib3.connectionpool - Starting new HTTP connection (1): localhost:39853
+12:08:57 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session HTTP/1.1" 200 0
+12:08:57 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"146.0.7680.153","chrome":{"chromedriverVersion":"145.0.7632.117 (de4e5d6e13b995f5e04137970c0e8ec456017467-refs/branch-heads/7632@{#3101})","userDataDir":"/tmp/org.chromium.Chromium.scoped_dir.dMJLkk"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:34119"},"goog:processID":4902,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"4300059906f95885beba3fe8211ae058"}} | headers=HTTPHeaderDict({'Content-Length': '882', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:57 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:57 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/timeouts {'implicit': 0}
+12:08:57 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/timeouts HTTP/1.1" 200 0
+12:08:57 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:57 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:57 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/url {'url': 'https://www.saucedemo.com'}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/url HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [INFO    ] pages.login_page - navigate to login page
+12:08:58 [INFO    ] pages.login_page - login | user=standard_user
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element {'using': 'css selector', 'value': "[data-test='username']"}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/element HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.2"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.2'}]}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/execute/sync HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] pages.base_page - _find OK | locator=('css selector', "[data-test='username']")
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.2/clear {}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.2/clear HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.2/value {'text': 'standard_user', 'value': ['s', 't', 'a', 'n', 'd', 'a', 'r', 'd', '_', 'u', 's', 'e', 'r']}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.2/value HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] pages.base_page - _input OK | locator=('css selector', "[data-test='username']") | text=standard_user
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element {'using': 'css selector', 'value': "[data-test='password']"}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/element HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.3"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.3'}]}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/execute/sync HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] pages.base_page - _find OK | locator=('css selector', "[data-test='password']")
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.3/clear {}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.3/clear HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.3/value {'text': 'secret_sauce', 'value': ['s', 'e', 'c', 'r', 'e', 't', '_', 's', 'a', 'u', 'c', 'e']}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.3/value HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] pages.base_page - _input OK | locator=('css selector', "[data-test='password']") | text=secret_sauce
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element {'using': 'css selector', 'value': "[data-test='login-button']"}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/element HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.4"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.4'}]}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/execute/sync HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - GET http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.4/enabled {}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "GET /session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.4/enabled HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.4/click {}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.4/click HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] pages.base_page - _click OK | locator=('css selector', "[data-test='login-button']")
+12:08:58 [INFO    ] pages.inventory_page - go_to_cart
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element {'using': 'css selector', 'value': '.shopping_cart_link'}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/element HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.15"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){var g=this||self;\nfunction aa(a){var b=typeof...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.15'}]}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/execute/sync HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - GET http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.15/enabled {}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "GET /session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.15/enabled HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - POST http://localhost:39853/session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.15/click {}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "POST /session/4300059906f95885beba3fe8211ae058/element/f.9E8FDB7AB4769E9F88A7C56F2EECF2CC.d.0662CE6A3E2750586D7BB2172293DF74.e.15/click HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] pages.base_page - _click OK | locator=('css selector', '.shopping_cart_link')
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - GET http://localhost:39853/session/4300059906f95885beba3fe8211ae058/url {}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "GET /session/4300059906f95885beba3fe8211ae058/url HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":"https://www.saucedemo.com/cart.html"} | headers=HTTPHeaderDict({'Content-Length': '47', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - DELETE http://localhost:39853/session/4300059906f95885beba3fe8211ae058 {}
+12:08:58 [DEBUG   ] urllib3.connectionpool - http://localhost:39853 "DELETE /session/4300059906f95885beba3fe8211ae058 HTTP/1.1" 200 0
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+12:08:58 [DEBUG   ] selenium.webdriver.remote.remote_connection - Finished Request
