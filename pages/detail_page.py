@@ -1,5 +1,6 @@
 import logging
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC  # 🌟 关键：引入 EC！
 from pages.base_page import BasePage
 
 logger = logging.getLogger(__name__)
@@ -18,11 +19,15 @@ class DetailPage(BasePage):
     def add_to_cart(self) -> "DetailPage":
         logger.info("detail: add_to_cart")
         self._click(self._ADD_TO_CART)
+        # 🌟 智能等待：点完“添加”，死死盯住直到“移除”按钮在页面上出现
+        self._wait.until(EC.visibility_of_element_located(self._REMOVE_BTN))
         return self
 
     def remove_from_cart(self) -> "DetailPage":
         logger.info("detail: remove_from_cart")
         self._click(self._REMOVE_BTN)
+        # 🌟 智能等待：点完“移除”，死死盯住直到“添加”按钮重新出现
+        self._wait.until(EC.visibility_of_element_located(self._ADD_TO_CART))
         return self
 
     def back_to_products(self) -> None:

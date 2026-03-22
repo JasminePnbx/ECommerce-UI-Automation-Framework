@@ -12,10 +12,6 @@ class InventoryPage(BasePage):
     _ITEM_NAMES = (By.CSS_SELECTOR, ".inventory_item_name")
 
     def _add_to_cart_locator(self, product_name: str) -> tuple:
-        """
-        通过商品名称动态生成加入购物车按钮的 XPath。
-        不再硬编码商品 ID，通过商品名定位父容器再找按钮。
-        """
         return (
             By.XPATH,
             f"//div[text()='{product_name}']"
