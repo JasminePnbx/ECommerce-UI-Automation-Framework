@@ -1,0 +1,51 @@
+import logging
+from selenium.webdriver.common.by import By
+from pages.base_page import BasePage
+
+logger = logging.getLogger(__name__)
+
+
+class InventoryPage(BasePage):
+    _CART_LINK  = (By.CSS_SELECTOR, ".shopping_cart_link")
+    _CART_BADGE = (By.CSS_SELECTOR, ".shopping_cart_badge")
+    _ITEM_NAMES = (By.CSS_SELECTOR, ".inventory_item_name")
+
+    def _add_to_cart_locator(self, product_name: str) -> tuple:
+        """
+        通过商品名称动态生成加入购物车按钮的 XPath。
+        不再硬编码商品 ID，通过商品名定位父容器再找按钮。
+        """
+        return (
+            By.XPATH,
+            f"//div[text()='{product_name}']"
+            f"/ancestor::div[contains(@class,'inventory_item')]"
+            f"//button"
+        )
+
+    def add_product_to_cart(self, product_name: str) -> "InventoryPage":
+        """通过商品名称加入购物车，不依赖硬编码 ID。"""
+        logger.info("add_product_to_cart | product=%s", product_name)
+        self._click(self._add_to_cart_locator(product_name))
+        return self
+
+    def go_to_cart(self) -> None:
+        logger.info("go_to_cart")
+        self._click(self._CART_LINK)
+
+    def get_cart_count(self) -> str:
+        """返回购物车角标数字，购物车为空时返回空字符串。"""
+        try:
+            return self._get_text(self._CART_BADGE)
+        except Exception:
+            return ""
+
+    def click_product(self, product_name: str) -> None:
+        """点击商品名称进入详情页。"""
+        locator = (By.XPATH, f"//div[text()='{product_name}']")
+        self._click(locator)
+        logger.info("click_product | product=%s", product_name)
+
+    def get_all_product_names(self) -> list[str]:
+        """返回当前页面所有商品名称列表。"""
+        elements = self._driver.find_elements(*self._ITEM_NAMES)
+        return [e.text for e in elements]
